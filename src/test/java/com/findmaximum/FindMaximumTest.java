@@ -8,56 +8,23 @@ public class FindMaximumTest
     FindMaximum findMaximum=new FindMaximum();
 
     @Test
-    public void maxIntegerNumber_atFirstPosition_returnTheNumber()
+    public void maximumInteger()
     {
-        Assert.assertEquals(86,(int)findMaximum.getMaximum(86,34,78));
+        Integer[] integerArray={10,53,76,15,46};
+        Assert.assertEquals((int)76,(int)findMaximum.getMaximum(integerArray));
     }
 
     @Test
-    public void maxIntegerNumber_atSecondPosition_returnTheNumber()
+    public void maximumDouble()
     {
-        Assert.assertEquals(72,(int)findMaximum.getMaximum(65,72,48));
+        Double[] doubleArray={76.8,866.42,434.3,756.8,6453.1};
+        Assert.assertEquals((Double)6453.1,(Double)findMaximum.getMaximum(doubleArray));
     }
 
     @Test
-    public void maxIntegerNumber_atThirdPosition_returnTheNumber()
+    public void maximumString()
     {
-        Assert.assertEquals(34,(int)findMaximum.getMaximum(31,12,34));
-    }
-
-    @Test
-    public void maxDoubleNumber_atFirstPosition_returnTheNumber()
-    {
-        Assert.assertEquals((Double)86.6,(Double)findMaximum.getMaximum(86.6,34.8,78.7));
-    }
-
-    @Test
-    public void maxDoubleNumber_atSecondPosition_returnTheNumber()
-    {
-        Assert.assertEquals((Double)72.54,(Double) findMaximum.getMaximum(65.93,72.54,48.75));
-    }
-
-    @Test
-    public void maxDoubleNumber_atThirdPosition_returnTheNumber()
-    {
-        Assert.assertEquals((Double)34.12,(Double) findMaximum.getMaximum(31.90,12.98,34.12));
-    }
-
-    @Test
-    public void maxString_atFirstPosition_returnTheString()
-    {
-        Assert.assertEquals((String)"banana",(String)findMaximum.getMaximum("banana", "air", "apple"));
-    }
-
-    @Test
-    public void maxString_atSecondPosition_returnTheString()
-    {
-        Assert.assertEquals((String)"elephant",(String)findMaximum.getMaximum("cat", "elephant", "bird"));
-    }
-
-    @Test
-    public void maxString_atThirdPosition_returnTheString()
-    {
-        Assert.assertEquals((String)"orchid",(String)findMaximum.getMaximum("daisy", "iris", "orchid"));
+        String[] stringArray={"lavender","canna","iris","ixora","crocus"};
+        Assert.assertEquals((String)"lavender",(String)findMaximum.getMaximum(stringArray));
     }
 }

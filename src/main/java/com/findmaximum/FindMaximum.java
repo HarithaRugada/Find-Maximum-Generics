@@ -1,18 +1,12 @@
 package com.findmaximum;
 
+import java.util.Arrays;
+
 public class FindMaximum
 {
-    public static <E extends Comparable<E>> E getMaximum(E first,E second,E third)
+    public static <E extends Comparable<E>> E getMaximum(E[] inputArray)
     {
-        E maximum=first;
-        if(second.compareTo(maximum) > 0)
-        {
-            maximum=second;
-        }
-        if(third.compareTo(maximum) > 0)
-        {
-            maximum=third;
-        }
-        return maximum;
+        Arrays.sort(inputArray);
+        return inputArray[inputArray.length-1];
     }
 }
