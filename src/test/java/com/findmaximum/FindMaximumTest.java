@@ -42,4 +42,22 @@ public class FindMaximumTest
     {
         Assert.assertEquals((Double)34.12,(Double) findMaximum.getMaximumDouble(31.90,12.98,34.12));
     }
+
+    @Test
+    public void maxString_atFirstPosition_returnTheString()
+    {
+        Assert.assertEquals((String)"banana",(String)findMaximum.getMaximumString("banana", "air", "apple"));
+    }
+
+    @Test
+    public void maxString_atSecondPosition_returnTheString()
+    {
+        Assert.assertEquals((String)"elephant",(String)findMaximum.getMaximumString("cat", "elephant", "bird"));
+    }
+
+    @Test
+    public void maxString_atThirdPosition_returnTheString()
+    {
+        Assert.assertEquals((String)"orchid",(String)findMaximum.getMaximumString("daisy", "iris", "orchid"));
+    }
 }

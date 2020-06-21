@@ -1,5 +1,7 @@
 package com.findmaximum;
 
+import java.awt.font.ShapeGraphicAttribute;
+
 public class FindMaximum
 {
     public Integer getMaximumInteger(Integer firstNumber,Integer secondNumber,Integer thirdNumber)
@@ -28,5 +30,19 @@ public class FindMaximum
             maximumDouble=thirdNumber;
         }
         return maximumDouble;
+    }
+
+    public String getMaximumString(String firstString,String secondString,String thirdString)
+    {
+        String maximumString=firstString;
+        if(secondString.compareTo(maximumString) > 0)
+        {
+            maximumString=secondString;
+        }
+        if(thirdString.compareTo(maximumString) > 0)
+        {
+            maximumString=thirdString;
+        }
+        return maximumString;
     }
 }
