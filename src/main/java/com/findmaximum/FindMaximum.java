@@ -2,23 +2,20 @@ package com.findmaximum;
 
 import java.util.Arrays;
 
-public class FindMaximum<E extends Comparable<E>>
-{
-    E[] inputArray;
+public class FindMaximum<T extends Comparable<T>> {
+    private final T[] elements;
 
-    public FindMaximum(E[] inputArray)
-    {
-        this.inputArray = inputArray;
+    public FindMaximum(T... elements) {
+        this.elements = elements;
     }
 
-    public E getMaximum()
-    {
-        Arrays.sort(inputArray);
-        return inputArray[inputArray.length - 1];
+    public T getMaximum() {
+        Arrays.sort(elements);
+        printMaximum(elements[elements.length - 1]);
+        return (T) elements[elements.length - 1];
     }
 
-    public void printMaximum()
-    {
-        System.out.println(inputArray[inputArray.length - 1]);
+    public void printMaximum(T maximumValue) {
+        System.out.println(maximumValue);
     }
 }
